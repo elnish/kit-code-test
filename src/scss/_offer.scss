@@ -43,7 +43,7 @@
         }
     }
     &__list-link {
-        @include round(100px, 100px, #fff);
+        @include round(100px, 100px, $headerFontColor);
         border: 2px solid #9dacad;
         margin-right: 65px;
         background-color: transparent;
@@ -51,7 +51,7 @@
         transition: all ease-in .4s;
         &_active,
         &:hover {
-            border-color: #1baf5d;
+            border-color: $firstBgColor;
         }
     }
     &__block-header {
@@ -68,8 +68,8 @@
      
     }
     &__icon-block {
-        @include round(62px, 62px, #1db05e);
-        color: #fff;
+        @include round(62px, 62px, $firstBgColor);
+        color: $headerFontColor;
         font-size: 30px;
         margin-right: 30px;
     }

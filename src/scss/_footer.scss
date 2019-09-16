@@ -43,7 +43,7 @@
         left: 33px;
     }
     &__hr-line {
-        @include hrLine(#fff);
+        @include hrLine($headerFontColor);
         opacity: 0.1;
     }
     &__bottom {

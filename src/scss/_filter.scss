@@ -2,7 +2,7 @@
     width: 100%;
     height: 60px;
     box-shadow: 0 1px 0 #edebec;
-    background-color: #fff;
+    background-color: $bgColor;
     @include flex(space-between, center);
     padding: 0 150px;
     margin-bottom: 30px;
@@ -18,7 +18,7 @@
         margin-right: 25px;
         &_hover:hover,
         &_active {
-            color: #e94e38;
+            color: $activeColor;
         }
     }
     &__location-block {
@@ -38,7 +38,7 @@
         background-color: transparent;
         border-radius: 25px;
         padding-left: 20px;
-        color: #e94e38;
+        color: $activeColor;
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
@@ -60,7 +60,7 @@
         height: 35px;
         border-radius: 25px;
         @include navFont;
-        color: #fff;
+        color: $headerFontColor;
         padding: 10px 19px;
         &_hover {
             @include hoverCursor;
@@ -94,10 +94,10 @@
             background-color: $firstBgColor;
         }
         &_music-active {
-            background-color: #f19e1f;
+            background-color: $secondBgColor;
         }
         &_bus-active {
-            background-color: #88499c;
+            background-color: $thirdBgColor;
         }
         &_hover {
             transition: all ease-in-out .4s;

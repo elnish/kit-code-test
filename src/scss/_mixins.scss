@@ -1,0 +1,62 @@
+@mixin navFont {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@mixin flex($justifyContent, $alignItems) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin hoverCursor {
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+@mixin transparent-input {
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 26px;
+    padding-left: 30px;
+    color: $headerFontColor;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+}
+@mixin text-header {
+    text-shadow: 0 1px 1px rgba(0, 0, 1, 0.15);
+    color: $headerFontColor;
+    text-align: center;
+    font-weight: 500;
+}
+
+@mixin roundBtn {
+    display: block;
+    box-shadow: 0 2px 0 #c1412e;
+    background-color: #e94e38;
+    border-radius: 45px;
+    outline: none;
+    @include navFont;
+    font-weight: 500;
+    color: $headerFontColor;
+}
+
+@mixin round($width, $height, $bgColor) {
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    background-color: $bgColor;
+    @include flex(center, center);
+}
+
+@mixin hrLine($color) {
+    width: 75%;
+    height: 1px;
+    background-color: $color;
+    margin: 0 auto;
+    border: none;
+}

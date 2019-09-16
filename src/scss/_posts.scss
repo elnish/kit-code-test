@@ -1,0 +1,228 @@
+.posts {
+    max-width: 985px;
+    margin: 0 auto;
+    @include flex(flex-start, flex-start);
+    flex-wrap: wrap;
+    &__post-container {
+        width: 210px;
+        height: 266px;
+        border-radius: 3px;
+        box-shadow: 0 1px 0 #e2dee0;
+        background-color: $bgColor;
+        font-size: 12px;
+        font-weight: 500;
+        margin: 16px 18px;
+        &_large {
+            width: 455px;
+            height: 270px;
+        }
+    }
+    &__post-picture {
+        width: 100%;
+        height: 140px;
+        background-size: cover;
+        border-bottom: 3px solid;
+        position: relative;
+        &_large {
+            height: 120px;
+            padding-bottom: 9px;
+        }
+        &_home {
+            border-color: $firstBgColor;
+            background: url(../images/img1.png) no-repeat;
+        }
+        &_music {
+            border-color: $secondBgColor;
+            background: url(../images/img2.png) no-repeat;
+        }
+        &_bus {
+            border-color: $thirdBgColor;
+            background: url(../images/img1.png) no-repeat;
+        }
+        &_large-home {
+            background: url(../images/img3.png) no-repeat;
+            @include flex(center, flex-end);
+        }
+        &_large-home-second {
+            border-color: $secondBgColor;
+            background: url(../images/img4.png) no-repeat;
+            @include flex(center, flex-end);
+        }
+    }
+    &__post-price {
+        width: 65px;
+        height: 25px;
+        background-color: $firstBgColor;
+        border-radius: 26px;
+        @include flex(center, center);
+        font-size: 12px;
+        color: $headerFontColor;
+        position: absolute;
+        top: 7px;
+        right: 8px;
+    }
+    &__post-icon {
+        @include round(55px, 55px, $headerFontColor);
+        border: 3px solid $headerFontColor;
+        position: absolute;
+        z-index: 100;
+        &_small {
+            top: 110px;
+            left: 75px;
+        }
+        &_large {
+            top: 95px;
+            left: 22px;
+        }
+        &_home {
+            background: $firstBgColor url(../images/home-icon.png) no-repeat center center;
+        }
+        &_music {
+            background: $secondBgColor url(../images/music-icon.png) no-repeat center center;
+        }
+        &_bus {
+            background: $thirdBgColor url(../images/bus-icon.png) no-repeat center center;
+        }
+        &_home-second {
+            background: $secondBgColor url(../images/home-icon.png) no-repeat center center;
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: $headerFontColor;
+        font-size: 18px;
+        padding: 25px 35px;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
+        &_home {
+            background-color: rgba(27, 175, 93, .7);
+        }
+        &_music {
+            background-color: rgba(241, 158, 31, .7);
+        }
+        &_bus {
+            background-color: rgba(136, 73, 156, .7);
+        }
+    }
+    &__show-btn {
+        display: block;
+        width: 137px;
+        height: 31px;
+        border: 2px solid $headerFontColor;
+        border-radius: 26px;
+        background-color: transparent;
+        font-size: 12px;
+        @include flex(space-evenly, center);
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+    &__content {
+        text-align: center;
+        padding: 25px 15px 0 15px;
+        &_large {
+            padding: 17px 17px 17px 22px;
+            text-align: left;
+            @include flex(flex-start, center);
+        }
+    }
+    &__post-header {
+        font-size: 14px;
+        color: #566375;
+        font-weight: 500;
+        &_smaller {
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 19px 0 6px 0;
+        }
+        &_bigger {
+            font-size: 18px;
+            color: $headerFontColor;
+            text-transform: uppercase;
+            margin-right: 8px;
+            text-shadow: 0 1px 1px rgba(0, 0, 1, 0.15);
+        }
+        &_home {
+            color: $firstBgColor;
+        }
+        &_music {
+            color: $secondBgColor;
+            padding-top: 35px;
+        }
+        &_bus {
+            color: $thirdBgColor;
+        }
+    }
+    &__star {
+        color: $secondBgColor;
+        &_empty {
+            color: $headerFontColor;
+        }
+    }
+    &__coment-block {
+        max-width: 350px;
+        font-size: 18px;
+        position: relative;
+    }
+    &__coment {
+        padding-left: 25px;
+    }
+    &__user-name {
+        color: #566375;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 35px;
+        text-transform: uppercase;
+    }
+    &__user-coment {
+        max-width: 300px;
+        color: #566375;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+    }
+    &__number {
+        color: #96a6a7;
+        font-size: 12px;
+        font-weight: 500;
+        &_light {
+            color: $headerFontColor;
+        }
+    }
+    &__load-more {
+        display: block;
+        color: #566375;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 48px;
+        margin: 16px auto;
+        text-decoration: underline;
+        &_small {
+            display: inline;
+            position: absolute;
+            bottom: 0px;
+            right: 2px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+        }
+    }
+
+    &__user-block {
+        @include round(55px, 55px, $headerFontColor);
+        border: 2px solid #e2dee0;
+        margin-right: 20px;
+        &_first {
+            background: url(../images/user1.png) no-repeat center center;
+        }
+        &_second {
+            background: url(../images/user2.png) no-repeat center center;
+        }
+    }
+}
