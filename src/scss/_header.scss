@@ -1,0 +1,133 @@
+.header {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    &__navigation-bar {
+        width: 100%;
+        height: 75px;
+        background-color: #fff;
+        @include flex(flex-end, center);
+        @include navFont;
+    }
+    &__logo {
+        position: absolute;
+        left: 150px;
+    }
+    &__logo-img {
+        width: 154px;
+        height: 45px;
+    }
+    &__nav-list {
+        max-width: 471px;
+        height: 75px;
+        @include flex(center, center);
+        @include navFont;
+        color: $navLinkColor;
+    }
+    &__nav-link {
+        margin-right: 20px;
+        padding: 30px 0;
+        position: relative;
+        &:after {
+            content: '';
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            background-color: $navLinkColor;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            transition: transform .5s ease;
+       }
+       &:hover {
+            &:after {
+                transform: scaleX(1);
+            }
+       }
+    }
+    &__search-block {
+        width: 75px;
+        height: 75px;
+        @include flex(center, center);
+        padding: 25px;
+        background-color: $searchBgColor;
+    }
+    &__login-block {
+        width: 317px;
+        height: 75px;
+        @include flex(flex-start, center);
+        background-color: $loginBntColor;
+    }
+    &__btn {
+        color: $headerFontColor;
+        text-transform: uppercase;
+        &_small {
+            font-size: 24px;
+            font-weight: 400;
+            padding: 25px;
+        }
+        &_large {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 30px 40px;
+        }
+        &_hover {
+            @include hoverCursor;
+        }  
+    }
+    &__user-icon {
+        margin-right: 15px;
+    }
+    &__login-text {
+        font-size: 14px;
+    }
+    &__form-block {
+        @include flex(center, center);
+        flex-direction: column;
+    }
+    &__form-header {
+        @include text-header;
+        font-size: 30px;
+        margin: 60px 0 30px 0;
+    }
+    &__select-wrapper {
+        margin-bottom: 20px;
+    }
+    &__select {
+        width: 220px;
+        height: 50px;
+        @include transparent-input;
+        background: rgba(255, 255, 255, .2) url(../images/arrow-icon.png) no-repeat;
+        background-position: right 24px top 22px;
+        background-size: 14px 9px;
+        appearance: none;
+        &:first-child {
+            margin-right: 30px;
+        }
+        
+        &_hover {
+            @include hoverCursor;
+        }
+    }
+    &__text-input {
+        width: 470px;
+        height: 55px;
+        @include transparent-input;
+        &::placeholder {
+            color: $headerFontColor;
+        }
+    }
+    &__search-btn {
+        width: 140px;
+        height: 60px;
+        font-size: 18px;
+        @include roundBtn;
+        margin: 30px auto;
+        &_hover {
+            @include hoverCursor;
+        }
+    } 
+}
+

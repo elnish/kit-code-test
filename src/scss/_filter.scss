@@ -1,0 +1,110 @@
+.filter {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 1px 0 #edebec;
+    background-color: #fff;
+    @include flex(space-between, center);
+    padding: 0 150px;
+    margin-bottom: 30px;
+    &__recomend-list {
+        @include flex(center, center);
+    }
+    &__recomend-link {
+        color: #96a6a7;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 25px 0;
+        margin-right: 25px;
+        &_hover:hover,
+        &_active {
+            color: #e94e38;
+        }
+    }
+    &__location-block {
+        @include flex(center, center);
+    }
+    &__select-block {
+        position: relative;
+        max-width: 115px;
+        background-color: transparent;
+        z-index: 1;
+        margin-right: 12px;
+    }
+    &__select {
+        width: 115px;
+        height: 35px;
+        border: 1px solid rgba(150, 166, 167, .5);
+        background-color: transparent;
+        border-radius: 25px;
+        padding-left: 20px;
+        color: #e94e38;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        appearance: none;
+        outline: none;
+        &_hover {
+            @include hoverCursor;
+        }
+    }
+    &__select-arrow {
+        position: absolute;
+        top: 10px;
+        right: 19px;
+        color: rgb(150, 166, 167);
+        z-index: -1;
+    }
+    &__map {
+        width: 125px;
+        height: 35px;
+        border-radius: 25px;
+        @include navFont;
+        color: #fff;
+        padding: 10px 19px;
+        &_hover {
+            @include hoverCursor;
+        }
+        &_active {
+            background-color: $firstBgColor;
+        }
+    }
+    &__map-text {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+    &__filter-block {
+        @include flex(center, center);
+    }
+    &__text {
+        color: #96a6a7;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__filter-list {
+        @include flex(center, center);
+    }
+    &__filter-link {
+        @include round(40px, 40px, #b6c0c1);
+        @include flex(center, center);
+        margin-left: 10px;
+        
+        &_home-active {
+            background-color: $firstBgColor;
+        }
+        &_music-active {
+            background-color: #f19e1f;
+        }
+        &_bus-active {
+            background-color: #88499c;
+        }
+        &_hover {
+            transition: all ease-in-out .4s;
+            &:hover {
+                opacity: .6;
+            }
+        }
+      
+    } 
+}
